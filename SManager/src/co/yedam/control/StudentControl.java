@@ -13,7 +13,7 @@ public class StudentControl {
 
 	public void run() {
 		boolean isTrue = true;
-		System.out.println(" ▶ 학생관리 프로그램 V.10 ◀ ");
+		System.out.println(" ▶ 학생관리 프로그램 v.10 ◀ ");
 		while (isTrue) {
 			System.out.println("1.학생목록   2.등록   3.수정   4.삭제   5.종료");
 			System.out.print("선택 > ");

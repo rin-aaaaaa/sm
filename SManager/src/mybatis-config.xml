@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings> <!-- 런타임시 마이바티스의 행위를 조정하기 위한 중요한 값 -->
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+
+	<typeAliases> <!-- 자바 타입에 대한 짧은 이름,  타이핑을 줄이기 위해 존재 -->
+		<typeAlias alias="student" type="co.yedam.vo.StudentVo" />
+	</typeAliases>
+	
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver"
+					value="oracle.jdbc.driver.OracleDriver" />
+				<property name="url"
+					value="jdbc:oracle:thin:@localhost:1521:xe" />
+				<property name="username" value="jsp" />
+				<property name="password" value="jsp" />
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<mappers>
+		<mapper resource="co/yedam/mapper/StudentMapper.xml" />
+	</mappers>
+</configuration>
