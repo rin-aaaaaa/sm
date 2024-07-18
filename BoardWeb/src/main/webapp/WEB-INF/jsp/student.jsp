@@ -26,7 +26,7 @@
  	<tr>
  	<th> 연락처 </th><td><%=std.getStdPhone() %></td></tr>
  	<tr>
- 	<th> 생일 </th><td><%=std.getStdBirth() %></td></tr>
+ 	<th> 생일 </th><td><%=std.getBirthDate() %></td></tr>
  	<tr>
  	<th> 주소</th><td><%=std.getAddress() %></td></tr>
  </table>

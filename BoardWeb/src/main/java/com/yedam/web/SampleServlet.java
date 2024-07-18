@@ -20,7 +20,7 @@ import com.yedam.vo.StudentVO;
 /**
  * Servlet implementation class SampleServlet
  */
-@WebServlet("/SampleServlet")
+//@WebServlet("/SampleServlet")
 public class SampleServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
