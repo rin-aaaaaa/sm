@@ -5,6 +5,20 @@ import com.yedam.service.BoardServiceImpl;
 
 public class AppTest {
 	public static void main(String[] args) {
+		//서치값
+		BoardService svc = new BoardServiceImpl();
+		SearchVO serach = new SearchVO();
+		serach.setSearchCondition("W");
+		serach.setKeyword("test");
+		serach.setPage(1);
+		
+		svc.boardList(serach).forEach(System.out::println);
+		System.out.println("- END -");
+		
+		//페이지로 출력
+//		BoardService svc = new BoardServiceImpl();
+//		svc.boardList(5).forEach(System.out::println);
+//		System.out.println("- END -");
 
 		// 세션접속
 //		SqlSession sqlsession = DataSource.getInstance().openSession(true); // true자동커밋
@@ -39,10 +53,10 @@ public class AppTest {
 //		mapper.selectList().forEach(board -> System.out.println(board.toString()));
 
 		
-		// 서비스 가져오기
-		BoardService svc = new BoardServiceImpl();
-		svc.boardList().forEach(System.out::println);
-		System.out.println("- END -");
+//		// 서비스 가져오기
+//		BoardService svc = new BoardServiceImpl();
+//		svc.boardList().forEach(System.out::println);
+//		System.out.println("- END -");
 
 	}
 }

@@ -2,11 +2,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../includes/header.jsp"%>
-	<h3>상세화면(board.jsp)</h3>
-	<%
-	BoardVO board = (BoardVO) request.getAttribute("board");
-	%>
-<form action="removeBoard.do">	
+ <h3> 삭제화면(removeForm.jsp)</h3>
+	<% BoardVO board = (BoardVO) request.getAttribute("board"); %>
+	
+ <form action="deleteBoard.do">	
 <input type="hidden" name="bno" value="<%=board.getBoardNo() %>">
 <table class="table">
 	<tr>
@@ -31,8 +30,8 @@
 
 	<tr>
 		<td colspan="4" align="center">
-		<input class="btn btn-danger" type="submit" value="삭제화면" >
-		<button class="btn btn-warning" type="button" > 수정화면 </button>
+		<input class="btn btn-danger" type="submit" value="삭제" >
+		<button class="btn btn-warning" type="button" > 수정 </button>
 		</td>
 	</tr>
 </table>
@@ -42,7 +41,6 @@
     location.href = 'modifyBoard.do?bno=<%=board.getBoardNo()%>';
 	});
 </script>
-
 
 </form>
 <%@ include file="../includes/footer.jsp"%>
