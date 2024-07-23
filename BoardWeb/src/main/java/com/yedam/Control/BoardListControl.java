@@ -45,7 +45,8 @@ public class BoardListControl implements Control{
         req.setAttribute("searchCondition", sc);
         req.setAttribute("keyword", kw);
 
-        req.getRequestDispatcher("WEB-INF/jsp/boardList.jsp") //
+        //req.getRequestDispatcher("WEB-INF/jsp/boardList.jsp")
+         req.getRequestDispatcher("board/boardList.tiles") //tiles.xml "/WEB-INF/jsp/{1}.jsp"
         .forward(req, resp); // 페이지 재지정
     }
 }

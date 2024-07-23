@@ -17,7 +17,7 @@ public class LogoutControl implements Control {
 		// 세션객체의 정보를 삭제하거나, setAttridute("logid", id
 		HttpSession session = req.getSession();
 		session.invalidate(); //  세션객체의 정보를 삭제
-		resp.sendRedirect("loginForm.do");
+		resp.sendRedirect("loginForm.do"); //클라이언트 리다이렉션: sendRedirect 메서드를 호출하면 클라이언트는 지정된 URL로 이동
 
 	}
 

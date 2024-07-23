@@ -1,7 +1,6 @@
 <%@page import="com.yedam.vo.BoardVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<jsp:include page="../includes/header.jsp" />
 <h3>삭제화면(removeForm.jsp)</h3>
 
 <form action="deleteBoard.do">
@@ -45,4 +44,3 @@
 	</script>
 
 </form>
-<jsp:include page="../includes/footer.jsp" />

@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.yedam.common.SearchVO;
 import com.yedam.vo.BoardVO;
+import com.yedam.vo.MemberVO;
 
 /*
  * MVC 패턴의 디자인에 따라서 Model영역(service,dao)
