@@ -17,12 +17,14 @@
 					<option value="">선택하세요.</option>
 					<option value="T" ${searchCondition == 'T' ? 'selected' : '' }>제목</option>
 					<option value="W" ${searchCondition eq 'W' ? 'selected' : '' }>작성자</option>
-					<option value="TW" ${searchCondition eq 'TW' ? 'selected' : '' }>제목 & 작성자</option>
+					<option value="TW" ${searchCondition eq 'TW' ? 'selected' : '' }>제목
+						& 작성자</option>
 				</select>
 			</div>
 
 			<div class="col-sm-6">
-				<input type="text" name="keyword" value="${keyword}" class="form-control">
+				<input type="text" name="keyword" value="${keyword}"
+					class="form-control">
 			</div>
 
 			<div class="col-sm-2">
@@ -47,7 +49,8 @@
 		<c:forEach var="board" items="${boardList }">
 			<tr>
 				<td>${board.boardNo }</td>
-				<td><a href="board.do?page=${paging.page}&bno=${board.boardNo }">${board.title }</a></td>
+				<td><a
+					href="board.do?page=${paging.page}&bno=${board.boardNo }">${board.title }</a></td>
 				<td>${board.writer }</td>
 				<td>${board.writerDate }</td>
 			</tr>

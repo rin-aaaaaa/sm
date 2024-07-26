@@ -37,13 +37,13 @@
 
 	<update id="updateStudent" parameterType="student">
 		update tbl_student
-		set std_phone = (#{stdPhone})
-		where std_no = (#{stdNo})
+		set std_phone = #{stdPhone}
+		where std_no = #{stdNo}
 	</update>
 	
 	<delete id="deleteStudent" parameterType="string">
 		delete from tbl_student
-		where std_no = (#{stdNo})
+		where std_no = #{stdNo}
 	</delete>
 
 </mapper>

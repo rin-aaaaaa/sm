@@ -33,12 +33,12 @@ public class BoardListControl implements Control{
         BoardService svc = new BoardServiceImpl();
 
 //        List<BoardVO> list = svc.boardList(Integer.parseInt(page));
-        List<BoardVO> list = svc.boardList(search);
+        List<BoardVO> list = svc.boardList(search); // 서비스 - 매퍼
 
         req.setAttribute("boardList", list);
 
         //paging.
-        int totalCnt = svc.totalCount(search);
+        int totalCnt = svc.totalCount(search); 
         PageDTO pageDTO = new PageDTO(Integer.parseInt(page),totalCnt);
         req.setAttribute("paging", pageDTO);
         

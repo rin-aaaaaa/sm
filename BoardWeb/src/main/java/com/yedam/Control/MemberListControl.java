@@ -16,17 +16,22 @@ public class MemberListControl implements Control {
 
 	@Override
 	public void exec(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String order = req.getParameter("order");
+		String res = req.getParameter("res");
 
-			String order = req.getParameter("order");
-	        MemberService svc = new MemberServiceImpl();
+        MemberService svc = new MemberServiceImpl();
 
-	        List<MemberVO> list = svc.memberList("user", order);
-	        order = order == null ? "member_id" : order;
+        order = order == null ? "member_id" : order;
+        res = res == null ? "user" : res;
 
-	        req.setAttribute("memberList", list);
-//	        resp.sendRedirect("memberList.do");
-	        
-	        req.getRequestDispatcher("admin/memberList.tiles").forward(req, resp); 
+        List<MemberVO> list = svc.memberList(res, order);
+
+        req.setAttribute("memberList", list);
+        req.setAttribute("res", res);
+        
+        req.getRequestDispatcher("admin/memberList.tiles").forward(req, resp); 
+		
 	}
 
 }
