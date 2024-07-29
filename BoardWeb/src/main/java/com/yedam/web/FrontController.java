@@ -23,6 +23,7 @@ import com.yedam.Control.LoginForm;
 import com.yedam.Control.LogoutControl;
 import com.yedam.Control.MemberListControl;
 import com.yedam.Control.ModifyBoard;
+import com.yedam.Control.PagingCount;
 import com.yedam.Control.RemoveBoard;
 import com.yedam.Control.RemoveReplyControl;
 import com.yedam.Control.RemoveStudent;
@@ -94,6 +95,9 @@ public class FrontController extends HttpServlet {
 		map.put("/addReply.do", new AddReplyControl());
 		// 삭제
 		map.put("/removeReply.do", new RemoveReplyControl());
+		
+		// 페이징
+		map.put("/pagingCount.do", new PagingCount());
 	}
 
 	@Override

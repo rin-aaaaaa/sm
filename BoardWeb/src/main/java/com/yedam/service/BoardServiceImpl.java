@@ -57,4 +57,6 @@ public class BoardServiceImpl implements BoardService{
 		return mapper.selectBoard(boardNO);
 	}
 
+
+
 }

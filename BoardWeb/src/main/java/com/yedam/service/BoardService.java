@@ -21,5 +21,7 @@ public interface BoardService {
 	boolean modifyBoard(BoardVO board);
 	boolean removeBoard(int boardNO);
 	BoardVO getBoard(int boardNO);
+	
+
 
 }
