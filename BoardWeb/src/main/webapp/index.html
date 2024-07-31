@@ -5,12 +5,34 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h3>링링입니다!</h3>
-	<p>웹앱을 실행하려면 웨서버/WAS가 필요합니다</p>
-	<p>웹앱을 실행하려면 많은 라이브러리 필요 / ojdbc,lombik,.... maber 환경으로</p>
-	<p> 메이브븐 : 라이브러리 관리, 프로젝트 빌드, 배로 역할</p>
-	<!-- <a href="jsp/studentList.jsp"> 학생목록이동 </a>-->
-	<a href="boardList.do"> 게시글목록이동 </a>
-	<p>한 페이지에서 모든 기능 구현(SPA)</p>
-	</body>
+	<h3>링링입니다!!</h3>
+	<p>웹앱을 실행하려면 웹서버/WAS가 필요합니다.</p>
+	<P>웹앱을 실행하려면 많은 라이브러리 필요. ojdbc, lombok, ... maven환경으로</p>
+	<p>메이븐 : 라이브러리 관리, 프로젝트 빌드, 배포 역할.</p>
+	<!-- <a href="jsp/studentList.jsp">학생목록이동...</a> -->
+	<a href="baordList.jsp">게시글목록 이동</a>
+	<p>한페이지에서 모든 기능 구현(SPA)</p>
+
+	<button id="uploadBtn">데이터생성</button>
+	
+	<select id="selectCenter">
+		<option value="서울특별시">서울특별시</option>
+		<option value="인천광역시">인천광역시</option>
+		<option value="대구광역시">대구광역시</option>
+		<option value="부산광역시">부산광역시</option>
+		<option value="광주광역시">광주광역시</option>
+	</select>
+	
+	<table border="2">
+		<thead>
+			<tr>
+				<th>센터id</th><th>센터명</th><th>주소</th><th>연락처</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	
+	<script src="js/index.js"></script>
+
+</body>
 </html>

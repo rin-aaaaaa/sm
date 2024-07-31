@@ -17,7 +17,10 @@ import com.yedam.Control.AddStudent;
 import com.yedam.Control.BoardControl;
 import com.yedam.Control.BoardForm;
 import com.yedam.Control.BoardListControl;
+import com.yedam.Control.CntByMember;
 import com.yedam.Control.DeleteBoard;
+import com.yedam.Control.GoogleChart;
+import com.yedam.Control.ImageDownLoad;
 import com.yedam.Control.LoginControl;
 import com.yedam.Control.LoginForm;
 import com.yedam.Control.LogoutControl;
@@ -98,6 +101,16 @@ public class FrontController extends HttpServlet {
 		
 		// 페이징
 		map.put("/pagingCount.do", new PagingCount());
+		
+		// 이미지 다운로드
+		map.put("/imageDownload.do", new ImageDownLoad());
+		
+		
+		// 차트(작성자별 게시건수)
+		map.put("/countByMember.do", new CntByMember());
+		// 차트페이지
+		map.put("/googleChart.do", new GoogleChart());
+		
 	}
 
 	@Override

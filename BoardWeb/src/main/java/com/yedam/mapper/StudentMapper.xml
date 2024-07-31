@@ -11,11 +11,12 @@
 		where member_id = #{id}
 		and member_pw = #{pw}
 	</select>
-	
+
 	<select id="memberList" resultType="com.yedam.vo.MemberVO">
 		select *
 		from tbl_member
-		where responsibility = #{res}
+		where
+		responsibility = #{res}
 		order by ${order}
 	</select>
 
@@ -23,27 +24,37 @@
 		select * from tbl_student
 		order by std_no
 	</select>
-	
-	<select id="selectOne" parameterType="String" resultType="student">
-	select * 
-	from tbl_student
-	where std_no = (#{stdNo})
+
+	<select id="selectOne" parameterType="String"
+		resultType="student">
+		select *
+		from tbl_student
+		where std_no = (#{stdNo})
 	</select>
 
 	<insert id="insertStudent" parameterType="student">
-		insert into tbl_student (std_no, std_name, std_phone, birth_date)
-		values(#{stdNo}, #{stdName}, #{stdPhone}, #{birthDate})
+		insert into tbl_student
+		(std_no, std_name, std_phone, birth_date)
+		values(#{stdNo}, #{stdName},
+		#{stdPhone}, #{birthDate})
 	</insert>
 
 	<update id="updateStudent" parameterType="student">
 		update tbl_student
-		set std_phone = #{stdPhone}
+		set
+		std_phone = #{stdPhone}
 		where std_no = #{stdNo}
 	</update>
-	
+
 	<delete id="deleteStudent" parameterType="string">
 		delete from tbl_student
 		where std_no = #{stdNo}
 	</delete>
+
+	<select id="selectCountByMember" resultType="map">
+    select b.writer as "writer", m.member_nm as "member_name", count(1) as "member_cnt"
+    from tbl_board b join tbl_member m on b.writer = m.member_id
+    group by b.writer, m.member_nm
+  </select>
 
 </mapper>
